@@ -5,6 +5,9 @@ import { getF1Drivers } from './services/fetch-utils';
 function App() {
   // const [isLoading, setIsLoading] = useState(false);
   const [f1Drivers, setF1Drivers] = useState([]);
+  const [premierLeagueTeams, setPremierLeagueTeams] = useState([]);
+  const [premierLeaguePlayers, setPremierLeaguePlayers] = useState([]);
+  const [premierLeagueMatches, setPremierLeagueMatches] = useState([]);
   
   useEffect(async () => {
     // setIsLoading(true);
