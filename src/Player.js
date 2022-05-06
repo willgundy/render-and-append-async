@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Player({ player }) {
   return (
-    <div>
+    <div className='card player'>
       <h2>{player.player}</h2>
       <h3>{player.position}</h3>
       <h5>{player.nation}</h5>
