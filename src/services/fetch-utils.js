@@ -19,7 +19,7 @@ export async function getPremierLeaguePlayers() {
 
 export async function getPremierLeagueMatches() {
   const response = await client
-    .from('premier_league_teams')
+    .from('premier_league_matches')
     .select('*')
     .limit(20);
   

@@ -4,6 +4,7 @@ import { getF1Drivers, getPremierLeagueMatches, getPremierLeaguePlayers, getPrem
 import DriverList from './DriverList';
 import TeamList from './TeamList';
 import PlayerList from './PlayerList';
+import MatchList from './MatchList';
 
 function App() {
   // const [isLoading, setIsLoading] = useState(false);
@@ -27,6 +28,8 @@ function App() {
     setPremierLeagueMatches(matchesResponse);
   }, []);
 
+  console.log(premierLeagueMatches);
+
   return (
     <div className="App">
       <h1>F1 Drivers</h1>
@@ -35,6 +38,8 @@ function App() {
       <TeamList teams={premierLeagueTeams} />
       <h1>Premier League Players</h1>
       <PlayerList players={premierLeaguePlayers} />
+      <h1>Premier League Matches</h1>
+      <MatchList matches={premierLeagueMatches} />
     </div>
   );
 }
