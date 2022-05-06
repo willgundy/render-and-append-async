@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .App-logo {
@@ -35,4 +37,121 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.card {
+  border-radius: 10px;
+  margin: 10px;
+  padding: 5px;
+}
+
+.card:hover {
+  transform: scale(1.2);
+  z-index: 2;
+}
+
+
+.driver {
+  background-color: #4B3B47;
+  color: #E0D8DE;
+}
+
+.drivers {
+  background-color: #a4819c;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.half-container {
+  width: 50%;
+}
+
+.team {
+  background-color: #0A2E36;
+  color: #D1FAFF;
+}
+
+.teams {
+  background-color: #5c8790;
+}
+
+.player {
+  background-color: #2b5339;
+  color: #FFD1BA;
+}
+
+.players {
+  background-color: #559f6f;
+}
+
+.match {
+  background-color: #363537;
+  color: #DCED31;
+}
+
+.matches {
+  background-color: #848187;
+}
+
+.match-header {
+  align-items: center;
+  justify-content: space-around;
+}
+
+.teamScore {
+  width: 33%;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+
+.bounceball {
+  position: relative;
+  display: inline-block;
+  height: 37px;
+  width: 15px;
+  margin-right: 20px;
+}
+
+.bounceball:before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+    animation: bounce 300ms alternate infinite ease;
+}
+
+@keyframes bounce {
+  0% {
+    top: 30px;
+    height: 5px;
+    border-radius: 60px 60px 20px 20px;
+    transform: scaleX(2);
+  }
+  35% {
+    height: 15px;
+    border-radius: 50%;
+    transform: scaleX(1);
+  }
+  100% {
+    top: 0;
+  }
+}
+
+.loadScreen {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+  color: white;
 }

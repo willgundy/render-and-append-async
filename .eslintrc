@@ -20,6 +20,7 @@
     "cy": false
   },
   "rules": {
+    "react-hooks/exhaustive-deps": "off",
     "eqeqeq": ["error", "always"],
     "no-console": "warn",
     "indent": [
