@@ -28,8 +28,6 @@ function App() {
     setPremierLeagueMatches(matchesResponse);
   }, []);
 
-  console.log(premierLeagueMatches);
-
   return (
     <div className="App">
       <h1>F1 Drivers</h1>
