@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState, useEffect } from 'react';
+import { getF1Drivers } from './services/fetch-utils';
 
 function App() {
+  // const [isLoading, setIsLoading] = useState(false);
+  const [f1Drivers, setF1Drivers] = useState([]);
+  
+  useEffect(async () => {
+    // setIsLoading(true);
+    
+    const f1DriversResponse = await getF1Drivers();
+
+    // setIsLoading(false);
+    setF1Drivers(f1DriversResponse);
+  }, []);
+
+  console.log(f1Drivers);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>F1 Drivers</h1>
+      {f1Drivers.map((driver, i) => <h3 key={i}>{driver.driver}</h3>)}
     </div>
   );
 }
