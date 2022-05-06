@@ -1,6 +1,8 @@
 import './App.css';
 import { useState, useEffect } from 'react';
 import { getF1Drivers, getPremierLeagueMatches, getPremierLeaguePlayers, getPremierLeagueTeams } from './services/fetch-utils';
+import DriverList from './DriverList';
+import TeamList from './TeamList';
 
 function App() {
   // const [isLoading, setIsLoading] = useState(false);
@@ -28,6 +30,8 @@ function App() {
     <div className="App">
       <h1>F1 Drivers</h1>
       <DriverList drivers={f1Drivers} />
+      <h1>Premier League Teams</h1>
+      <TeamList teams={premierLeagueTeams} />
     </div>
   );
 }
