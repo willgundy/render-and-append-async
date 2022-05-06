@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { getF1Drivers, getPremierLeagueMatches, getPremierLeaguePlayers, getPremierLeagueTeams } from './services/fetch-utils';
 import DriverList from './DriverList';
 import TeamList from './TeamList';
+import PlayerList from './PlayerList';
 
 function App() {
   // const [isLoading, setIsLoading] = useState(false);
@@ -32,6 +33,8 @@ function App() {
       <DriverList drivers={f1Drivers} />
       <h1>Premier League Teams</h1>
       <TeamList teams={premierLeagueTeams} />
+      <h1>Premier League Players</h1>
+      <PlayerList players={premierLeaguePlayers} />
     </div>
   );
 }

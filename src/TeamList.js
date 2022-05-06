@@ -4,14 +4,14 @@ import Team from './Team';
 
 export default function TeamList(props) {
   return (
-    <dive>
+    <div>
       { props.teams.map((team, i) => 
         <Team 
           key={i}
           team={team}
         />
       )}
-    </dive>
+    </div>
     
   );
 }
